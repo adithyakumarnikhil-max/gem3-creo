@@ -36,7 +36,7 @@ export const Story: React.FC = () => {
 
           <div className="space-y-6 text-lg text-secondary/80 max-w-lg">
             <RevealText delay={0.2} tag="p">
-              Founded in 1998, Arcform has grown to become a global leader in minimalist luxury. We believe that a home should be a sanctuary, a place that breathes with its inhabitants.
+              Founded in 1998, CREO Constructions has grown to become a global leader in minimalist luxury. We believe that a home should be a sanctuary, a place that breathes with its inhabitants.
             </RevealText>
             <RevealText delay={0.3} tag="p">
               Our work is characterized by clean lines, raw materials, and an unwavering dedication to the natural environment. Every project is a dialogue between the land and the structure.

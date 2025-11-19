@@ -44,9 +44,9 @@ export const Footer: React.FC = () => {
 
           <div className="flex flex-col gap-4">
             <h4 className="font-display text-lg uppercase tracking-widest mb-2 text-gray-400">Office</h4>
-            <p className="text-sm text-gray-300">123 Brutalist Ave,<br/>Berlin, Germany 10115</p>
-            <p className="text-sm text-gray-300 mt-2">+49 30 1234 5678</p>
-            <p className="text-sm text-gray-300">hello@arcform.com</p>
+            <p className="text-sm text-gray-300">No 37, 21st Main Road, Marenahalli,<br/>JP Nagar 2nd Phase,<br/>Bangalore 560078</p>
+            <p className="text-sm text-gray-300 mt-2">+91 9705075741</p>
+            <p className="text-sm text-gray-300 mt-2">pavankumar.k@creodesigners.com<br/>creoarchitects1@gmail.com</p>
           </div>
 
           <div className="flex flex-col gap-4">
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-col justify-end">
-            <p className="text-xs text-gray-500">© 2024 ARCFORM Architecture.</p>
+            <p className="text-xs text-gray-500">© 2024 CREO CONSTRUCTIONS.</p>
             <p className="text-xs text-gray-500 mt-1">All Rights Reserved.</p>
           </div>
         </div>
@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
       {/* Giant Text Cutout Anchor */}
       <div className="absolute bottom-[-2vw] left-0 w-full flex justify-center pointer-events-none opacity-10 select-none">
         <h1 className="font-display text-[20vw] leading-none font-bold text-white tracking-tighter">
-          ARCFORM
+          CREO
         </h1>
       </div>
     </footer>

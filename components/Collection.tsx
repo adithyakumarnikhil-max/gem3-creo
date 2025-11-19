@@ -24,7 +24,7 @@ export const Collection: React.FC = () => {
     <section className="w-full bg-primary py-32 overflow-hidden">
       <div className="px-6 md:px-10 flex justify-between items-end mb-16">
         <h2 className="font-display text-4xl md:text-6xl font-bold uppercase text-secondary">
-          The Arcform<br />Collection
+          The CREO<br />Collection
         </h2>
         <div className="hidden md:flex gap-4">
           <button className="w-12 h-12 rounded-full border border-secondary flex items-center justify-center hover:bg-secondary hover:text-white transition-colors">

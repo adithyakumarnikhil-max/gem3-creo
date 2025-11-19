@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
     >
       <div className="flex items-center">
         <span className="font-display font-bold text-2xl tracking-[0.2em] text-white">
-          ARCFORM
+          CREO
         </span>
       </div>
 
