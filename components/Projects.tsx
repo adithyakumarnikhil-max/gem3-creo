@@ -62,7 +62,7 @@ export const Projects: React.FC = () => {
              </p>
              <MagneticButton>
                 <div className="w-32 h-32 rounded-full border border-white/20 flex items-center justify-center uppercase text-xs tracking-widest font-bold hover:bg-white hover:text-secondary transition-all duration-300 cursor-pointer">
-                  Drag ->
+                  Drag &rarr;
                 </div>
              </MagneticButton>
           </div>
@@ -111,7 +111,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black">
-              ->
+              &rarr;
            </div>
         </div>
       </div>
@@ -121,6 +121,5 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
 // Fallback for Mobile (Vertical Stack)
 export const MobileProjects = () => {
-    // Implementation of vertical stack for mobile would go here or be integrated into main component with media queries
-    return null; // handled via CSS hidden/block classes in main App structure if needed, or merging logic.
+    return null;
 };
