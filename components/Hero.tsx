@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
         className="absolute inset-0 w-full h-full z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1516156008625-3a9d60da7057?q=80&w=3870&auto=format&fit=crop" // Darker, moodier forest concrete shot
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=2853&auto=format&fit=crop" 
           alt="Brutalist Architecture"
           className="w-full h-full object-cover"
         />
@@ -83,7 +83,7 @@ export const Hero: React.FC = () => {
           transition={{ delay: 2, duration: 1 }}
           className="w-full flex justify-between items-end"
         >
-            <div className="text-xs font-medium tracking-widest">EST. 1998</div>
+            <div className="text-xs font-medium tracking-widest">EST. 2019</div>
             <div className="flex flex-col items-center gap-2">
               <div className="text-[10px] uppercase tracking-widest writing-mode-vertical">Scroll</div>
               <div className="w-[1px] h-12 bg-white/50 overflow-hidden">

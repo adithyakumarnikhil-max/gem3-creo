@@ -58,7 +58,7 @@ export const Manifesto: React.FC = () => {
           <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 border-t border-secondary/10 pt-8">
              <div className="text-accent text-sm font-medium leading-relaxed">
                CREO CONSTRUCTIONS<br/>
-               SINCE 1998
+               SINCE 2019
              </div>
              <p className="text-secondary/60 text-lg leading-relaxed">
                 We keep exploring, work together, grow brilliance, and shape tomorrow. Excellence is not an act, but a habit.

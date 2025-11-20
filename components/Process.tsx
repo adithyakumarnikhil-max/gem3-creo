@@ -7,25 +7,25 @@ const steps = [
     id: "01", 
     title: "DISCOVERY & VISION", 
     desc: "We begin by listening. Understanding your needs, your site, and your dreams. Every great structure starts with a conversation.",
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1517581177697-a533d8d55178?q=80&w=2000&auto=format&fit=crop" // Meeting/Sketching
   },
   { 
     id: "02", 
     title: "CONCEPT & DESIGN", 
     desc: "Translating ideas into form. Sketches, 3D models, and material selection. We iterate until the design speaks to the soul.",
-    image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=2000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" // Architectural Model/Draft
   },
   { 
     id: "03", 
     title: "COLLABORATION & BUILD", 
     desc: "Working closely with engineers and builders to ensure precision. We manage the chaos of construction to deliver peace of mind.",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000&auto=format&fit=crop" // Construction/Site
   },
   { 
     id: "04", 
     title: "DELIVERY & IMPACT", 
     desc: "The final walkthrough. Handing over the keys to your new reality. We ensure every detail is perfect before you step inside.",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2000&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=2000&auto=format&fit=crop" // Finished Luxury Home
   },
 ];
 
@@ -52,11 +52,11 @@ export const Process: React.FC = () => {
                 <img
                   src={steps[activeStep].image}
                   alt={steps[activeStep].title}
-                  className="w-full h-full object-cover opacity-70"
+                  className="w-full h-full object-cover opacity-50"
                 />
                 {/* Gradient Overlay for Text Readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-secondary/40 to-transparent" />
-                <div className="absolute inset-0 bg-black/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-secondary/20" />
               </motion.div>
             </AnimatePresence>
           </div>

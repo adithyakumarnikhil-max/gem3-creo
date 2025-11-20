@@ -38,27 +38,29 @@ export const Projects: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [scrollRange, setScrollRange] = useState(0);
 
-  // Mathematically calculate the exact scroll distance needed
   useEffect(() => {
     const updateScrollRange = () => {
       if (scrollContainerRef.current) {
         const scrollWidth = scrollContainerRef.current.scrollWidth;
         const clientWidth = window.innerWidth;
-        // Add a small buffer (e.g. 100px) to ensure the last item is fully comfortable in view
-        setScrollRange(Math.max(0, scrollWidth - clientWidth + 100));
+        // Precise calculation: total scrollable width minus viewport width
+        // This ensures the last card touches the right edge exactly at the end of the scroll
+        setScrollRange(scrollWidth - clientWidth);
       }
     };
 
-    // Initial check
     updateScrollRange();
     
-    // Update on resize
-    window.addEventListener('resize', updateScrollRange);
-    // Also update after a small delay to ensure images/fonts have laid out
+    const handleResize = () => {
+        updateScrollRange();
+    };
+
+    window.addEventListener('resize', handleResize);
+    // Safety check for image loading
     const timer = setTimeout(updateScrollRange, 500);
 
     return () => {
-      window.removeEventListener('resize', updateScrollRange);
+      window.removeEventListener('resize', handleResize);
       clearTimeout(timer);
     };
   }, []);
@@ -67,15 +69,12 @@ export const Projects: React.FC = () => {
     target: targetRef,
   });
 
-  // Transform vertical scroll (0 to 1) into horizontal pixels (0 to -scrollRange)
   const x = useTransform(scrollYProgress, [0, 1], [0, -scrollRange]);
 
   return (
-    // The height '400vh' determines how long the horizontal scroll section lasts
     <section ref={targetRef} className="relative h-[400vh] bg-secondary text-white hidden md:block">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         
-        {/* Fixed Header Overlay */}
         <div className="absolute top-10 left-10 z-20 mix-blend-difference pointer-events-none">
            <h2 className="font-display text-4xl font-bold uppercase tracking-tight">Selected Works</h2>
         </div>
