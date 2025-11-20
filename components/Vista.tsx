@@ -15,13 +15,12 @@ export const Vista: React.FC = () => {
     <section ref={containerRef} className="relative w-full h-[80vh] overflow-hidden my-20">
       <motion.div 
         style={{ scale, y }}
-        className="absolute inset-0 w-full h-full will-change-transform"
+        className="absolute inset-0 w-full h-full"
       >
         <img
-          src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=75&w=1600&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2700&auto=format&fit=crop"
           alt="Mountain Vista Courtyard"
           className="w-full h-full object-cover"
-          loading="lazy"
         />
       </motion.div>
       <div className="absolute inset-0 bg-black/10" />

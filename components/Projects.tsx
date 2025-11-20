@@ -8,28 +8,28 @@ const projects = [
     title: "Villa Nova",
     location: "Copenhagen",
     year: "2023",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=75&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: 2,
     title: "The Obsidian",
     location: "Kyoto",
     year: "2022",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=75&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: 3,
     title: "Concrete Solace",
     location: "Portland",
     year: "2024",
-    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=75&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop",
   },
   {
     id: 4,
     title: "Azure Heights",
     location: "Bangalore",
     year: "2021",
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=75&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?q=80&w=2000&auto=format&fit=crop",
   },
 ];
 
@@ -50,8 +50,7 @@ export const Projects: React.FC = () => {
            <h2 className="font-display text-4xl font-bold uppercase tracking-tight">Selected Works</h2>
         </div>
 
-        {/* Horizontal Scroll Container - GPU Accelerated */}
-        <motion.div style={{ x }} className="flex gap-16 px-20 w-full will-change-transform">
+        <motion.div style={{ x }} className="flex gap-16 px-20 w-full">
           
           {/* Intro Card */}
           <div className="flex-shrink-0 w-[40vw] h-[70vh] flex flex-col justify-center">
@@ -63,7 +62,7 @@ export const Projects: React.FC = () => {
              </p>
              <MagneticButton>
                 <div className="w-32 h-32 rounded-full border border-white/20 flex items-center justify-center uppercase text-xs tracking-widest font-bold hover:bg-white hover:text-secondary transition-all duration-300 cursor-pointer">
-                  Drag &rarr;
+                  Drag ->
                 </div>
              </MagneticButton>
           </div>
@@ -94,12 +93,11 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="group relative w-[60vw] h-[70vh] flex-shrink-0 overflow-hidden bg-neutral-900 grayscale hover:grayscale-0 transition-all duration-700 ease-out will-change-transform">
+    <div className="group relative w-[60vw] h-[70vh] flex-shrink-0 overflow-hidden bg-neutral-900 grayscale hover:grayscale-0 transition-all duration-700 ease-out">
       <img
         src={project.image}
         alt={project.title}
-        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110 will-change-transform"
-        loading="lazy"
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60" />
       
@@ -113,7 +111,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         </div>
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500">
            <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-black">
-              &rarr;
+              ->
            </div>
         </div>
       </div>
@@ -121,6 +119,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   );
 };
 
+// Fallback for Mobile (Vertical Stack)
 export const MobileProjects = () => {
-    return null;
+    // Implementation of vertical stack for mobile would go here or be integrated into main component with media queries
+    return null; // handled via CSS hidden/block classes in main App structure if needed, or merging logic.
 };

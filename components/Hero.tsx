@@ -15,27 +15,24 @@ const revealVariants = {
 
 export const Hero: React.FC = () => {
   const { scrollY } = useScroll();
-  // Parallax + Zoom Out effect - Optimized limits
+  // Parallax + Zoom Out effect for that expensive feel
   const y = useTransform(scrollY, [0, 1000], [0, 400]);
-  const scale = useTransform(scrollY, [0, 1000], [1.1, 1.2]); 
-  const opacity = useTransform(scrollY, [0, 1000], [1, 0.5]);
+  const scale = useTransform(scrollY, [0, 1000], [1.1, 1.2]); // Subtle zoom
+  const opacity = useTransform(scrollY, [0, 800], [1, 0]);
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-secondary text-white">
-      {/* Background Image Container - GPU Promoted Layer */}
       <motion.div 
         style={{ y, scale, opacity }} 
-        className="absolute inset-0 w-full h-full z-0 will-change-transform"
+        className="absolute inset-0 w-full h-full z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?q=75&w=1600&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1516156008625-3a9d60da7057?q=80&w=3870&auto=format&fit=crop" // Darker, moodier forest concrete shot
           alt="Brutalist Architecture"
           className="w-full h-full object-cover"
-          loading="eager"
         />
-        {/* Dark Gradient Overlays */}
         <div className="absolute inset-0 bg-black/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-black/40 opacity-90" />
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary via-transparent to-black/40 opacity-80" />
       </motion.div>
 
       <div className="relative z-10 w-full h-full flex flex-col justify-between pb-12 px-6 md:px-12 pt-32">
@@ -51,7 +48,7 @@ export const Hero: React.FC = () => {
         </motion.div>
 
         {/* Main Title */}
-        <div className="flex flex-col items-center md:items-start w-full pointer-events-none">
+        <div className="flex flex-col items-center md:items-start w-full">
            {/* Line 1 */}
            <div className="overflow-hidden">
              <motion.h1 
@@ -104,10 +101,6 @@ export const Hero: React.FC = () => {
         .stroke-text-white {
           -webkit-text-stroke: 2px rgba(255,255,255,0.8);
           color: transparent;
-        }
-        .writing-mode-vertical {
-          writing-mode: vertical-rl;
-          text-orientation: mixed;
         }
         @media (max-width: 768px) {
           .stroke-text-white {
